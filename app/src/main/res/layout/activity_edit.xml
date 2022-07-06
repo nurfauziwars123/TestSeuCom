@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.AddWarung">
+
+  <ImageView
+      android:id="@+id/ivAddWarung"
+      android:layout_width="0dp"
+      android:layout_height="300dp"
+      android:layout_margin="32dp"
+      android:clickable="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@android:drawable/ic_menu_camera" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/iWarungName"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="32dp"
+      android:layout_marginBottom="64dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/ivAddWarung"
+      >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etWarungName"
+        android:background="@drawable/et_background_white"
+        android:layout_width="match_parent"
+        android:enabled="false"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:hint="nama Warung"
+        tools:ignore="HardcodedText" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/iCordinate"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toStartOf="@id/btnPickCordinate"
+      app:layout_constraintStart_toStartOf="@id/iWarungName"
+      app:layout_constraintTop_toBottomOf="@id/iWarungName"
+      >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etCordinate"
+        android:background="@drawable/et_background_white"
+        android:layout_width="match_parent"
+        android:enabled="false"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:hint="titik kordinat"
+        tools:ignore="HardcodedText" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <Button
+      android:id="@+id/btnPickCordinate"
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      android:layout_marginTop="8dp"
+      android:padding="8dp"
+      android:textColor="@color/white"
+      android:text="@string/pick_cordinate"
+      android:background="@drawable/background_button_nocolor"
+      android:backgroundTint="@android:color/holo_red_light"
+      app:layout_constraintBottom_toBottomOf="@id/iCordinate"
+      app:layout_constraintEnd_toEndOf="@id/iWarungName"
+      app:layout_constraintTop_toTopOf="@id/iCordinate" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/iAdress"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="32dp"
+      android:layout_marginBottom="64dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/iCordinate"
+      >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etAdress"
+        android:background="@drawable/et_background_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:textColor="@color/black"
+        android:hint="alamat"
+        tools:ignore="HardcodedText" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <Button
+      android:id="@+id/btnSubmit"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:background="@drawable/background_button_nocolor"
+      android:backgroundTint="@android:color/holo_green_light"
+      android:text="save"
+      android:textColor="@color/white"
+      app:layout_constraintEnd_toEndOf="@id/iAdress"
+      app:layout_constraintStart_toStartOf="@id/iAdress"
+      app:layout_constraintTop_toBottomOf="@id/iAdress" />
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/btnFabDelete"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:layout_marginEnd="16dp"
+      android:clickable="true"
+      android:src="@drawable/ic_delete_red"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/btnFabEdit"
+      tools:layout_editor_absoluteY="852dp" />
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/btnFabEdit"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      android:layout_marginEnd="16dp"
+      android:clickable="true"
+      android:src="@drawable/ic_edit_white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      tools:layout_editor_absoluteY="852dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SeucomTest</string>
+    <string name="tvNotHaveAccount">Belum Punya Akun? Silahkan</string>
+    <string name="login_page">Login Page</string>
+    <string name="login">Login</string>
+    <string name="register_page">Register Page</string>
+    <string name="register">Register</string>
+    <string name="list_warung">List Warung</string>
+    <string name="nama_warung">Nama Warung</string>
+    <string name="alamat_warung">Alamat Warung</string>
+    <string name="kordinat">Kordinat</string>
+    <string name="input">input</string>
+    <string name="pick_cordinate">Pick Cordinate</string>
+</resources>
